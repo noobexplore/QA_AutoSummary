@@ -1,6 +1,5 @@
 # QA_AutoSummary
 
-[toc]
 
 ### 1. 项目背景
 
@@ -8,93 +7,11 @@
 
 比赛地址为：https://aistudio.baidu.com/aistudio/competition/detail/3
 
-### 2. 项目结构
-
-本项目的目录结构如下：
-
-QA_AutoSummary
-├─Readme.md
-├─seq2seq_model_v2
-|        ├─__init__.py
-|        ├─model_layer.py
-|        ├─seq2seq_batcher.py
-|        ├─seq2seq_beamtest_helper.py
-|        ├─seq2seq_greedytest_helper.py
-|        ├─seq2seq_model.py
-|        ├─seq2seq_test.py
-|        ├─seq2seq_train.py
-|        ├─seq2seq_train_helper.py
-|        ├─result
-|        ├─datasets
-|        |    ├─__init__.py
-|        |    ├─wv_model
-|        |    ├─vocab
-|        |    ├─train_data
-|        |    ├─test_data
-|        |    ├─stopwords
-|        |    |     └stopwords.txt
-|        |    ├─pickle
-|        |    ├─cutDict
-|        |    |    └user_dict.txt
-|        |    ├─checkpoints
-|        ├─data_utils
-|        |     ├─__init__.py
-|        |     ├─config.py
-|        |     ├─data_loader.py
-|        |     ├─file_utils.py
-|        |     ├─gpu_utils.py
-|        |     ├─multi_proc_utils.py
-|        |     ├─params_utils.py
-|        |     ├─plot_utils.py
-|        |     ├─wv_loader.py
-|        |     ├─font
-|        |     |  ├─TrueType
-|        |     |  |    └simhei.ttf
-├─PGN_remodel
-|      ├─PGN_model.py
-|      ├─__init__.py
-|      ├─bacher.py
-|      ├─loss.py
-|      ├─model_layers.py
-|      ├─pgn_beam_test_helper.py
-|      ├─pgn_test.py
-|      ├─pgn_test_helper.py
-|      ├─pgn_train.py
-|      ├─pgn_train_helper.py
-|      ├─result
-|      ├─paramsjson
-|      |     └params.json
-|      ├─datasets
-|      |    ├─__init__.py
-|      |    ├─wv_model
-|      |    ├─vocab
-|      |    ├─train_data
-|      |    ├─test_data
-|      |    ├─stopwords
-|      |    |     └stopwords.txt
-|      |    ├─cutDict
-|      |    |    └user_dict.txt
-|      |    ├─checkpoints
-|      ├─data_utils
-|      |     ├─Readme.md
-|      |     ├─config.py
-|      |     ├─data_loader.py
-|      |     ├─data_loader2.py
-|      |     ├─file_utils.py
-|      |     ├─gpu_utils.py
-|      |     ├─multi_proc_utils.py
-|      |     ├─params_utils.py
-|      |     ├─plot_utils.py
-|      |     ├─wv_loader.py
-|      |     ├─font
-|      |     |  ├─TrueType
-|      |     |  |    └simhei.ttf
-
-### 3.项目简介
+### 2.项目简介
 
 首先该项目选取seq2seq+attention模型作为baseline，模型文件夹对应seq2seq_model_v2，网络架构图如下：
 
-![seq2seq+att](D:\xftp_submit_file\clean_subversion\QA_AutoSummary\img\Seq2Seq1.jpg)
+![seq2seq+att](https://github.com/noobexplore/QA_AutoSummary/blob/master/img/Seq2Seq1.jpg)
 
 然后为了解决一下问题:
 
@@ -103,7 +20,7 @@ QA_AutoSummary
 
 采用PGN网络和coverage机制进行改进，改进的网络架构如下：
 
-![PGN](D:\xftp_submit_file\clean_subversion\QA_AutoSummary\img\PGN1.jpg)
+![PGN](https://github.com/noobexplore/QA_AutoSummary/blob/master/img/PGN1.jpg)
 
 #### 改动细节
 
@@ -129,4 +46,4 @@ python main.py
 
 最终提交到比赛平台上达到30.4的ROUGE-L评分，如下图：
 
-![](D:\xftp_submit_file\clean_subversion\QA_AutoSummary\img\result1.png)
+![](https://github.com/noobexplore/QA_AutoSummary/blob/master/img/result1.png)
