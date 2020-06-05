@@ -1,6 +1,5 @@
 # QA_AutoSummary
 
-[toc]
 
 ### 1. 项目背景
 
