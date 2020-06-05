@@ -7,10 +7,7 @@
 
 比赛地址为：https://aistudio.baidu.com/aistudio/competition/detail/3
 
-### 2. 项目结构
-
-
-### 3.项目简介
+### 2.项目简介
 
 首先该项目选取seq2seq+attention模型作为baseline，模型文件夹对应seq2seq_model_v2，网络架构图如下：
 
