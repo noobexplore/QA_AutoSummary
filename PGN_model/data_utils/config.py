@@ -1,0 +1,83 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Time : 2020/3/7 16:02
+# @Author : TheTAO
+# @Site : 
+# @File : config.py
+# @Software: PyCharm
+import os
+import pathlib
+
+# 预处理数据 构建数据集
+is_build_dataset = True
+
+# 获取工程的根目录, 这样路径就可以不区分操作系统
+root = pathlib.Path(os.path.abspath(__file__)).parent.parent
+
+# 原始数据保存路径
+train_data_path = os.path.join(root, 'datasets', 'AutoMaster_TrainSet.csv')
+test_data_path = os.path.join(root, 'datasets', 'AutoMaster_TestSet.csv')
+
+# 停用词的保存路径
+stop_word_path = os.path.join(root, 'datasets', 'stopwords', 'stopwords.txt')
+
+# 分词用户自定义字典
+user_dict = os.path.join(root, 'datasets', 'cutDict', 'user_dict.txt')
+
+# 预处理后的训练集和测试集的csv文件分词路径
+train_seg_path = os.path.join(root, 'datasets', 'train_data', 'train_seg.csv')
+test_seg_path = os.path.join(root, 'datasets', 'test_data', 'test_seg.csv')
+# 合并后的分词文件路径
+merger_seg_path = os.path.join(root, 'datasets', 'merged_train_test_seg_data.csv')
+
+# 1.数据标签分离
+train_x_seg_path = os.path.join(root, 'datasets', 'train_data', 'train_X_seg_data.csv')
+train_y_seg_path = os.path.join(root, 'datasets', 'train_data', 'train_Y_seg_data.csv')
+# 验证数据集
+val_x_seg_path = os.path.join(root, 'datasets', 'train_data', 'val_X_seg_data.csv')
+val_y_seg_path = os.path.join(root, 'datasets', 'train_data', 'val_Y_seg_data.csv')
+# 测试数据集
+test_x_seg_path = os.path.join(root, 'datasets', 'test_data', 'test_X_seg_data.csv')
+
+# 2.填充好的训练集和测试集文件
+train_x_pad_path = os.path.join(root, 'datasets', 'train_data', 'train_X_pad_data.csv')
+train_y_pad_path = os.path.join(root, 'datasets', 'train_data', 'train_Y_pad_data.csv')
+test_x_pad_path = os.path.join(root, 'datasets', 'test_data', 'test_X_pad_data.csv')
+
+# 3.numpy转换好的数据
+train_x_path = os.path.join(root, 'datasets', 'train_data', 'train_X')
+train_y_path = os.path.join(root, 'datasets', 'train_data', 'train_Y')
+test_x_path = os.path.join(root, 'datasets', 'test_data', 'test_X')
+
+# 4.词向量保存路径和迭代次数
+save_wv_model_path = os.path.join(root, 'datasets', 'wv_model', 'w2v.model')
+# 词向量矩阵路径
+embedding_matrix_path = os.path.join(root, 'datasets', 'wv_model', 'embedding_matrix')
+# 正反向词典路径
+vocab_path = os.path.join(root, 'datasets', 'vocab', 'vocab.txt')
+reverse_vocab_path = os.path.join(root, 'datasets', 'vocab', 'reverse_vocab.txt')
+# 词向量训练轮数
+wv_train_epochs = 10
+
+# 5.保存点路径
+checkpoint_dir = os.path.join(root, 'datasets', 'checkpoints',
+                              'training_checkpoints_pgn64_ed_300_lr_1e-4_lstm512_ep_30_31813')
+checkpoint_prefix = os.path.join(checkpoint_dir, 'ckpt')
+
+# 6.保存结果路径
+save_result_dir = os.path.join(root, 'result')
+# 7.词向量维度及一些固定的配置参数
+embedding_dim = 300
+# 样本大小
+sample_total = 82871
+# 训练和批量测试时的batch
+batch_size = 32
+# beam_search的batch要跟beam_size一样
+beam_batch = 3
+# 模型训练周期
+epochs = 30
+# 词表大小+4个特殊标志
+vocab_size = 31813
+# lstm_units大小
+lstm_units = 256
+
