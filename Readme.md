@@ -94,7 +94,7 @@ QA_AutoSummary
 
 首先该项目选取seq2seq+attention模型作为baseline，模型文件夹对应seq2seq_model_v2，网络架构图如下：
 
-![seq2seq+att](D:\xftp_submit_file\clean_subversion\QA_AutoSummary\img\Seq2Seq1.jpg)
+![seq2seq+att](https://github.com/noobexplore/QA_AutoSummary/blob/master/img/Seq2Seq1.jpg)
 
 然后为了解决一下问题:
 
@@ -103,7 +103,7 @@ QA_AutoSummary
 
 采用PGN网络和coverage机制进行改进，改进的网络架构如下：
 
-![PGN](D:\xftp_submit_file\clean_subversion\QA_AutoSummary\img\PGN1.jpg)
+![PGN](https://github.com/noobexplore/QA_AutoSummary/blob/master/img/PGN1.jpg)
 
 #### 改动细节
 
@@ -129,4 +129,4 @@ python main.py
 
 最终提交到比赛平台上达到30.4的ROUGE-L评分，如下图：
 
-![](D:\xftp_submit_file\clean_subversion\QA_AutoSummary\img\result1.png)
+![](https://github.com/noobexplore/QA_AutoSummary/blob/master/img/result1.png)
